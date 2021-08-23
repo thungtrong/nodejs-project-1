@@ -1,0 +1,6 @@
+{
+    "port": 300,
+    "connection": "url",
+    "views": "src/views",
+    "public": "src/public"
+}

@@ -1,6 +1,7 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 
+console.log("Hello world");
 
 const path = require('path');
 

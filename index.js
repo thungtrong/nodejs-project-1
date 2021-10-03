@@ -5,9 +5,6 @@ console.log("Hello world");
 
 const path = require('path');
 
-const router = require('./src/routes');
-
-const configViewEngine = require('./view-engine');
 
 // Load config value
 const {port, views, public} = require('./config.json');
@@ -19,9 +16,12 @@ const app = express();
 app.use(express.static(path.join(__dirname, public)));
 
 // Teamplet engine
+const configViewEngine = require('./view-engine');
 configViewEngine(app, path.join(__dirname, views));
 
+
 // Routes
+const router = require('./src/routes');
 router(app);
 
 app.listen(port, function (){
